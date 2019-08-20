@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [test]
+    WITH PASSWORD = N'ngAuLowox{wen|$vnaqs2{M|msFT7_&#$!~<z{gvpHqWm?Fb', SID = 0xCBAA9F6F526F9940A5400A2A9CD396C7, DEFAULT_DATABASE = [Volunteer_DriversSQL], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

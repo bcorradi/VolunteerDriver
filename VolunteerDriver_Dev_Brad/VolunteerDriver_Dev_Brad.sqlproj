@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>VolunteerDriver_Dev_Brad</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{a21cf218-3685-4cc4-83d8-92420f055645}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>VolunteerDriver_Dev_Brad</RootNamespace>
+    <AssemblyName>VolunteerDriver_Dev_Brad</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\FMPtblClientInsurance.sql" />
+    <Build Include="dbo\Tables\tblMergeRide.sql" />
+    <Build Include="dbo\Tables\tblMergeEzClaimPatient.sql" />
+    <Build Include="dbo\Tables\tblMergeEzClaim.sql" />
+    <Build Include="dbo\Tables\tblMergeEzClaimBilling2.sql" />
+    <Build Include="dbo\Tables\FMPtblDrivers.sql" />
+    <Build Include="dbo\Tables\tblMergeEzPatientClientLink2.sql" />
+    <Build Include="dbo\Tables\tblRate.sql" />
+    <Build Include="dbo\Tables\tblMergeEzClaimPatientHistory.sql" />
+    <Build Include="dbo\Tables\tblMergeArchiveRide.sql" />
+    <Build Include="dbo\Tables\tblMergeEzClaimHistory.sql" />
+    <Build Include="dbo\Tables\FMPtblTripLegs.sql" />
+    <Build Include="dbo\Tables\tblMergeEzClaimBillingHistory.sql" />
+    <Build Include="dbo\Tables\tblMergeClient.sql" />
+    <Build Include="dbo\Tables\tblAddressVerify.sql" />
+    <Build Include="dbo\Tables\tblMergeEzPatientClientLinkOld.sql" />
+    <Build Include="dbo\Tables\tblMergeClientAddress.sql" />
+    <Build Include="dbo\Tables\FMPtblTrips.sql" />
+    <Build Include="dbo\Tables\tblMergeClientInsurance.sql" />
+    <Build Include="dbo\Tables\tblMergeClientDriverDistance.sql" />
+    <Build Include="dbo\Tables\tblMergeEzclaimhistorytemp.sql" />
+    <Build Include="dbo\Tables\tblRide.sql" />
+    <Build Include="dbo\Tables\tblMergeEzpatientclientlink2temp.sql" />
+    <Build Include="dbo\Tables\FMPTripsRides_old.sql" />
+    <Build Include="dbo\Tables\tblMergeEzClaimExportMods.sql" />
+    <Build Include="dbo\Tables\tblMergeDriverAudit.sql" />
+    <Build Include="dbo\Tables\tblEzClaimPatient.sql" />
+    <Build Include="dbo\Tables\tblMergeDriver.sql" />
+    <Build Include="dbo\Tables\FMtblClientInsurance_old.sql" />
+    <Build Include="dbo\Tables\tblTextDriver.sql" />
+    <Build Include="dbo\Tables\ltblCity.sql" />
+    <Build Include="dbo\Tables\tblEzClaim.sql" />
+    <Build Include="dbo\Tables\tblGeneralMembers.sql" />
+    <Build Include="dbo\Tables\tblEzClaimBilling2.sql" />
+    <Build Include="dbo\Tables\Switchboard Items.sql" />
+    <Build Include="dbo\Tables\tbltest.sql" />
+    <Build Include="dbo\Tables\tblCancelReason.sql" />
+    <Build Include="dbo\Tables\ltblClientType.sql" />
+    <Build Include="dbo\Tables\tblClientInsuranceRideUpdateAudit.sql" />
+    <Build Include="dbo\Tables\EzPatientClientLink2.sql" />
+    <Build Include="dbo\Tables\qryInsuranceBillingCountyTotals_.sql" />
+    <Build Include="dbo\Tables\tblInsuranceBillingRPT.sql" />
+    <Build Include="dbo\Tables\ltblCounty.sql" />
+    <Build Include="dbo\Tables\tblEzClaimDups.sql" />
+    <Build Include="dbo\Tables\tblAddressType.sql" />
+    <Build Include="dbo\Tables\tblSystemDeactivatedAddress.sql" />
+    <Build Include="dbo\Tables\tblClientInsuranceChange.sql" />
+    <Build Include="dbo\Tables\ltblTripType.sql" />
+    <Build Include="dbo\Tables\tblEzClaimPatientHistory.sql" />
+    <Build Include="dbo\Tables\RMPassengerCount.sql" />
+    <Build Include="dbo\Tables\tblEzClaimPhysicianHistory.sql" />
+    <Build Include="dbo\Tables\Sheet1_.sql" />
+    <Build Include="dbo\Tables\tblMergeRideDeleted.sql" />
+    <Build Include="dbo\Tables\ltlbTripPurpose.sql" />
+    <Build Include="dbo\Tables\tblInsuranceBillingRptPending.sql" />
+    <Build Include="dbo\Tables\tblPendingWorkbookNotes.sql" />
+    <Build Include="dbo\Tables\FMPInsurance.sql" />
+    <Build Include="dbo\Tables\tblArchiveRide.sql" />
+    <Build Include="dbo\Tables\EzClaimTripLink.sql" />
+    <Build Include="dbo\Tables\tblTrip.sql" />
+    <Build Include="dbo\Tables\EzBillingTripLink.sql" />
+    <Build Include="dbo\Tables\tblEzClaimHistory.sql" />
+    <Build Include="dbo\Tables\tblUnloadedReason.sql" />
+    <Build Include="dbo\Tables\tblClientEligibility.sql" />
+    <Build Include="dbo\Tables\tblEzClaimBillingHistory.sql" />
+    <Build Include="dbo\Tables\tblClient.sql" />
+    <Build Include="dbo\Tables\EzPatientClientLinkOld.sql" />
+    <Build Include="dbo\Tables\ridelinkold.sql" />
+    <Build Include="dbo\Tables\tblEzClaimDupsOld.sql" />
+    <Build Include="dbo\Tables\tblClientAddress.sql" />
+    <Build Include="dbo\Tables\tblSecurity.sql" />
+    <Build Include="dbo\Tables\tblEZDup.sql" />
+    <Build Include="dbo\Tables\tblEZBillingLegs.sql" />
+    <Build Include="dbo\Tables\tblClientInsurance.sql" />
+    <Build Include="dbo\Tables\tblEZLegs.sql" />
+    <Build Include="dbo\Tables\ltblRules.sql" />
+    <Build Include="dbo\Tables\tblDriver.sql" />
+    <Build Include="dbo\Tables\tblVehicle.sql" />
+    <Build Include="dbo\Tables\tblEzClaimAddressRptOld.sql" />
+    <Build Include="dbo\Tables\tblTraining.sql" />
+    <Build Include="dbo\Tables\tblDriverTrainingLink.sql" />
+    <Build Include="dbo\Tables\tblClientDriverDistance.sql" />
+    <Build Include="dbo\Tables\tblEzClaimAddressRptNew.sql" />
+    <Build Include="dbo\Tables\tblDriverAddress.sql" />
+    <Build Include="dbo\Tables\tblCityDistances.sql" />
+    <Build Include="dbo\Tables\tblCityDistance.sql" />
+    <Build Include="dbo\Tables\tblCityDistances2.sql" />
+    <Build Include="dbo\Tables\ltblLogType.sql" />
+    <Build Include="dbo\Tables\tblFMPdriverAll.sql" />
+    <Build Include="dbo\Tables\tblImportMasterDriverList.sql" />
+    <Build Include="dbo\Tables\tblTripLog.sql" />
+    <Build Include="dbo\Tables\tbltrace.sql" />
+    <Build Include="dbo\Tables\tblInsurance.sql" />
+    <Build Include="dbo\Tables\tblFilter.sql" />
+    <Build Include="dbo\Tables\tblezclaimhistorytemp.sql" />
+    <Build Include="dbo\Tables\tblInsuranceRules.sql" />
+    <Build Include="dbo\Tables\tblEZOutstandingBalance.sql" />
+    <Build Include="dbo\Tables\ezpatientclientlink2temp.sql" />
+    <Build Include="dbo\Tables\tblPreModifierReport.sql" />
+    <Build Include="dbo\Tables\tblAuditTrail.sql" />
+    <Build Include="dbo\Tables\tblEzClaimExportMods.sql" />
+    <Build Include="dbo\Tables\tblAddress.sql" />
+    <Build Include="dbo\Tables\tblEzClaimPhysician.sql" />
+    <Build Include="dbo\Tables\tblOldAccessDriverTrips.sql" />
+    <Build Include="dbo\Tables\ftptest.sql" />
+    <Build Include="dbo\Tables\tblArchiveTrip.sql" />
+    <Build Include="dbo\Tables\tblNoShow.sql" />
+    <Build Include="dbo\Views\vDriverList.sql" />
+    <Build Include="dbo\Views\vEzClaimPatient2.sql" />
+    <Build Include="dbo\Views\vEzClaimPhysician2.sql" />
+    <Build Include="dbo\Views\vEzPatientClientLinktest.sql" />
+    <Build Include="dbo\Views\vDriverReimburse2RideInfo.sql" />
+    <Build Include="dbo\Views\LFScheduleTrips.sql" />
+    <Build Include="dbo\Views\vLaserFiche.sql" />
+    <Build Include="dbo\Views\vClientList2.sql" />
+    <Build Include="dbo\Views\vDeactivateClients.sql" />
+    <Build Include="dbo\Views\vLaserficheDriverReimbursement.sql" />
+    <Build Include="dbo\Views\vRideEntryValidation.sql" />
+    <Build Include="dbo\Views\vClientTrips.sql" />
+    <Build Include="dbo\Views\vDriverTrips.sql" />
+    <Build Include="dbo\Views\vAuditRideEntry.sql" />
+    <Build Include="dbo\Views\vPatientTable.sql" />
+    <Build Include="dbo\Views\vActiveAddresses.sql" />
+    <Build Include="dbo\Views\vAllTripsLegs.sql" />
+    <Build Include="dbo\Views\vPhysicianTable.sql" />
+    <Build Include="dbo\Views\vScheduledTrips_old.sql" />
+    <Build Include="dbo\Views\vInsertDupTripAndRides.sql" />
+    <Build Include="dbo\Views\vDriverSummaryHistory.sql" />
+    <Build Include="dbo\Views\vDeactivateClients2.sql" />
+    <Build Include="dbo\Views\vClientDriverAddress.sql" />
+    <Build Include="dbo\Views\vScheduledTrips.sql" />
+    <Build Include="dbo\Views\vEzClaimPatient.sql" />
+    <Build Include="dbo\Views\vEzClaimPhysician.sql" />
+    <Build Include="dbo\Views\vPastTrips.sql" />
+    <Build Include="dbo\Views\vDriverReimburse1TripInfo.sql" />
+    <Build Include="dbo\Views\vClientList.sql" />
+    <Build Include="Security\select-insert-update-delete.sql" />
+    <Build Include="Security\select-insert-update.sql" />
+    <Build Include="Security\RuralRides.sql" />
+    <Build Include="Security\RuralRideDrivers.sql" />
+    <Build Include="Security\EZClaimAnalysisAdmin.sql" />
+    <Build Include="Security\test2.sql" />
+    <Build Include="Security\AEOA_test1.sql" />
+    <Build Include="Security\AEOA_test1_1.sql" />
+    <Build Include="Security\AEOA_john.jadron.sql" />
+    <Build Include="Security\AEOA_john_1.jadron.sql" />
+    <Build Include="Security\AEOA_colette.hanson.sql" />
+    <Build Include="Security\AEOA_colette_1.hanson.sql" />
+    <Build Include="Security\AEOA_marcia.mehle.sql" />
+    <Build Include="Security\AEOA_marcia_1.mehle.sql" />
+    <Build Include="Security\AEOA_tami.streiff.sql" />
+    <Build Include="Security\AEOA_tami_1.streiff.sql" />
+    <Build Include="Security\AEOA_karry.deshazo.sql" />
+    <Build Include="Security\AEOA_karry_1.deshazo.sql" />
+    <Build Include="Security\AEOA_William.smolensky.sql" />
+    <Build Include="Security\AEOA_William_1.smolensky.sql" />
+    <Build Include="Security\AEOA_cindy.johnson.sql" />
+    <Build Include="Security\AEOA_cindy_1.johnson.sql" />
+    <Build Include="Security\test.sql" />
+    <Build Include="Security\test_1.sql" />
+    <Build Include="Security\AEOA_test.volunteer.sql" />
+    <Build Include="Security\AEOA_test_1.volunteer.sql" />
+    <Build Include="Security\AEOA_jennifer.barfknecht.sql" />
+    <Build Include="Security\AEOA_jennifer_1.barfknecht.sql" />
+    <Build Include="Security\AEOA_anitria.love.sql" />
+    <Build Include="Security\AEOA_Anitria_1.Love.sql" />
+    <Build Include="Security\AEOA_cindy.morgan.sql" />
+    <Build Include="Security\AEOA_cindy_1.morgan.sql" />
+    <Build Include="Security\AEOA_billijo.larson.sql" />
+    <Build Include="Security\AEOA_billijo_1.larson.sql" />
+    <Build Include="Security\AEOA_Cari.meyer.sql" />
+    <Build Include="Security\AEOA_Cari_1.meyer.sql" />
+    <Build Include="Security\AEOA_david.maki.sql" />
+    <Build Include="Security\AEOA_david_1.maki.sql" />
+    <Build Include="Security\AEOA_fozzie.sqlservice.sql" />
+    <Build Include="Security\AEOA_fozzie_1.sqlservice.sql" />
+    <Build Include="Security\phone.sql" />
+    <Build Include="Security\phone_1.sql" />
+    <Build Include="Security\AEOA_Lucia.Snodgrass.sql" />
+    <Build Include="Security\AEOA_Lucia_1.Snodgrass.sql" />
+    <Build Include="Security\AEOA_anna.palo.sql" />
+    <Build Include="Security\AEOA_anna_1.palo.sql" />
+    <Build Include="Security\AEOA_randy.hokkanen.sql" />
+    <Build Include="Security\AEOA_randy_1.hokkanen.sql" />
+    <Build Include="Security\AEOA_Dixie.Kalstad.sql" />
+    <Build Include="Security\AEOA_Dixie_1.Kalstad.sql" />
+    <Build Include="Security\AEOA_Luke.Christensen.sql" />
+    <Build Include="Security\AEOA_Luke_1.Christensen.sql" />
+    <Build Include="Security\AEOA_diane.gilmore.sql" />
+    <Build Include="Security\AEOA_diane_1.gilmore.sql" />
+    <Build Include="Security\AEOA_nicholas.plante.sql" />
+    <Build Include="Security\AEOA_nicholas_1.plante.sql" />
+    <Build Include="Security\AEOA_Jennifer.Sale.sql" />
+    <Build Include="Security\AEOA_Jennifer_1.Sale.sql" />
+    <Build Include="Security\AEOA_jon.koskiniemi.sql" />
+    <Build Include="Security\AEOA_jon_1.koskiniemi.sql" />
+    <Build Include="Security\AEOA_Amy.Ninteman.sql" />
+    <Build Include="Security\AEOA_Amy_1.Ninteman.sql" />
+    <Build Include="Security\AEOA_Barb.White.sql" />
+    <Build Include="Security\AEOA_Barb_1.White.sql" />
+    <Build Include="Security\AEOA_aaron.johnson.sql" />
+    <Build Include="Security\AEOA_aaron_1.johnson.sql" />
+    <Build Include="Security\AEOA_martin.lepak.sql" />
+    <Build Include="Security\AEOA_martin_1.lepak.sql" />
+    <Build Include="Security\AEOA_john.stoeke.sql" />
+    <Build Include="Security\AEOA_john_1.stoeke.sql" />
+    <Build Include="Security\AEOA_kaela.pospeck.sql" />
+    <Build Include="Security\AEOA_kaela_1.pospeck.sql" />
+    <Build Include="Security\AEOA_jennifer.arola.sql" />
+    <Build Include="Security\AEOA_jennifer_1.arola.sql" />
+    <Build Include="Security\AEOA_karen.berg.sql" />
+    <Build Include="Security\AEOA_karen_1.berg.sql" />
+    <Build Include="Security\AEOA_Tim.Francisco.sql" />
+    <Build Include="Security\AEOA_Tim_1.Francisco.sql" />
+    <Build Include="Security\AEOA_amanda.reese.sql" />
+    <Build Include="Security\AEOA_amanda_1.reese.sql" />
+    <Build Include="Security\AEOA_brian.earsley.sql" />
+    <Build Include="Security\AEOA_brian_1.earsley.sql" />
+    <Build Include="Security\AEOA_doug.lowthian.sql" />
+    <Build Include="Security\AEOA_doug_1.lowthian.sql" />
+    <Build Include="Security\AEOA_Jillene.Clapsaddle.sql" />
+    <Build Include="Security\AEOA_Jillene_1.Clapsaddle.sql" />
+    <Build Include="Security\AEOA_katelyn.horn.sql" />
+    <Build Include="Security\AEOA_katelyn_1.horn.sql" />
+    <Build Include="Security\AEOA_Shelley.Jaranson.sql" />
+    <Build Include="Security\AEOA_Shelley_1.Jaranson.sql" />
+    <Build Include="Security\AEOA_Rachel.Butala.sql" />
+    <Build Include="Security\AEOA_Rachel_1.Butala.sql" />
+    <Build Include="Security\sqladmin.sql" />
+    <Build Include="Security\sqladmin_1.sql" />
+    <Build Include="Security\AEOA_Amy.hart.sql" />
+    <Build Include="Security\AEOA_Amy_1.hart.sql" />
+    <Build Include="Security\AEOA_amy.johnson.sql" />
+    <Build Include="Security\AEOA_amy_1.johnson.sql" />
+    <Build Include="Security\AEOA_Cyndie.Saari.sql" />
+    <Build Include="Security\AEOA_Cyndie_1.Saari.sql" />
+    <Build Include="Security\AEOA_techsupport.sql" />
+    <Build Include="Security\AEOA_techsupport_1.sql" />
+    <Build Include="Security\AEOA_scott.olson.sql" />
+    <Build Include="Security\AEOA_scott_1.olson.sql" />
+    <Build Include="Security\AEOA_Patrice.Mayasich.sql" />
+    <Build Include="Security\AEOA_Patrice_1.Mayasich.sql" />
+    <Build Include="Security\AEOA_Patti.Mayasich.sql" />
+    <Build Include="Security\AEOA_Patti_1.Mayasich.sql" />
+    <Build Include="Security\AEOA_brad.corradi.sql" />
+    <Build Include="Security\AEOA_brad_1.corradi.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\NoShowByInsurancebyAudit.sql" />
+    <Build Include="dbo\Stored Procedures\SplitTripAndRide.sql" />
+    <Build Include="dbo\Stored Procedures\VolunteerEzClaimPatientInsert2.sql" />
+    <Build Include="dbo\Stored Procedures\VolunteerEzClaimPhysicianInsert2.sql" />
+    <Build Include="dbo\Stored Procedures\ClientMerge.sql" />
+    <Build Include="dbo\Stored Procedures\DriverMerge.sql" />
+    <Build Include="dbo\Stored Procedures\SendRideEmailCheck2.sql" />
+    <Build Include="dbo\Stored Procedures\VolunteerEZClaimInsert.sql" />
+    <Build Include="dbo\Stored Procedures\GeneralMembersReport.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateAddressInRides.sql" />
+    <Build Include="dbo\Stored Procedures\VolunteerEZClaimBilling2.sql" />
+    <Build Include="dbo\Stored Procedures\InsuranceBillingRPT.sql" />
+    <Build Include="dbo\Stored Procedures\ClientInsuranceRideUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\EzClaimPatientInsert.sql" />
+    <Build Include="dbo\Stored Procedures\EzClaimPhysicianInsert.sql" />
+    <Build Include="dbo\Stored Procedures\InsuranceBillingPending.sql" />
+    <Build Include="dbo\Stored Procedures\UpdatePendingNote.sql" />
+    <Build Include="dbo\Stored Procedures\RideFacilityCheck.sql" />
+    <Build Include="dbo\Stored Procedures\SendRideEmailChecktest2.sql" />
+    <Build Include="dbo\Stored Procedures\InsurancePreapproval.sql" />
+    <Build Include="dbo\Stored Procedures\EzClaimClaimInsert.sql" />
+    <Build Include="dbo\Stored Procedures\EzClaimBillingInsert.sql" />
+    <Build Include="dbo\Stored Procedures\InsurancePreapprovalTest.sql" />
+    <Build Include="dbo\Stored Procedures\EZClaimDupRPT.sql" />
+    <Build Include="dbo\Stored Procedures\CreateDupTripAndRide.sql" />
+    <Build Include="dbo\Stored Procedures\EZLegsRPT.sql" />
+    <Build Include="dbo\Stored Procedures\ClientDriverDistance.sql" />
+    <Build Include="dbo\Stored Procedures\SendRideEmail.sql" />
+    <Build Include="dbo\Stored Procedures\SendRideEmailCheck.sql" />
+    <Build Include="dbo\Stored Procedures\SendMultipleRideEmailCheck.sql" />
+    <Build Include="dbo\Stored Procedures\ClientDriverDistanceExcel.sql" />
+    <Build Include="dbo\Stored Procedures\VolunteerEzClaimARNEWInsert.sql" />
+    <Build Include="dbo\Stored Procedures\VolunteerEzClaimAROLDInsert.sql" />
+    <Build Include="dbo\Stored Procedures\NoShow.sql" />
+    <Build Include="dbo\Stored Procedures\DriverRidesAudit.sql" />
+    <Build Include="dbo\Stored Procedures\sp_WhoIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\VolunteerEzClaimAddressUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\BlueCrossVerifiedCoverage.sql" />
+    <Build Include="dbo\Stored Procedures\InsuranceBillingEzclaimCompare.sql" />
+    <Build Include="dbo\Stored Procedures\EZClaimBilling.sql" />
+    <Build Include="dbo\Stored Procedures\CancelRevokedRides.sql" />
+    <Build Include="dbo\Stored Procedures\TripsDispatchedByUserListRPT.sql" />
+    <Build Include="dbo\Stored Procedures\EzClaimListWithOutstandingBalance.sql" />
+    <Build Include="dbo\Stored Procedures\EzUnloadByUser.sql" />
+    <Build Include="dbo\Stored Procedures\AddTripAndRidev1.sql" />
+    <Build Include="dbo\Stored Procedures\InsuranceBulkMonthRideRPT.sql" />
+    <Build Include="dbo\Stored Procedures\IntegrationPreModifierReport.sql" />
+    <Build Include="dbo\Stored Procedures\InsuranceBulkDayRideRPT.sql" />
+    <Build Include="dbo\Stored Procedures\STLCMilesRPT.sql" />
+    <Build Include="dbo\Stored Procedures\FtpTestImport.sql" />
+    <Build Include="dbo\Stored Procedures\SendRideEmailChecktest.sql" />
+    <Build Include="dbo\Stored Procedures\EzClaimExportModsReport.sql" />
+    <Build Include="dbo\Stored Procedures\InsuranceBillingStlcRPT.sql" />
+    <Build Include="dbo\Stored Procedures\NoShowByInsurance.sql" />
+    <Build Include="Security\AEOA_brian_2.earsley.sql" />
+    <Build Include="Security\AEOA_colette_2.hanson.sql" />
+    <Build Include="Security\AEOA_karry_2.deshazo.sql" />
+    <Build Include="Security\AEOA_marcia_2.mehle.sql" />
+    <Build Include="Security\AEOA_William_2.smolensky.sql" />
+    <Build Include="dbo\Views\vUnscheduledRide.sql" />
+  </ItemGroup>
+</Project>

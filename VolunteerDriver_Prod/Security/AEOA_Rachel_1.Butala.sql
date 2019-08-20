@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [AEOA\Rachel.Butala]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

@@ -1,0 +1,895 @@
+﻿CREATE TABLE [dbo].[FMPInsurance] (
+    [ID]               FLOAT (53)     NOT NULL,
+    [Fund Number]      FLOAT (53)     NULL,
+    [Insurance name]   NVARCHAR (255) NULL,
+    [Rate]             FLOAT (53)     NULL,
+    [Valid Start]      DATETIME       NULL,
+    [Valid end]        DATETIME       NULL,
+    [Drop Down Calc]   NVARCHAR (255) NULL,
+    [Allows_MealsMisc] FLOAT (53)     NULL,
+    [Allows_Unloaded]  FLOAT (53)     NULL,
+    [Allows_Loaded]    FLOAT (53)     NULL,
+    [upsize_ts]        ROWVERSION     NULL,
+    CONSTRAINT [aaaaaFMPInsurance_PK] PRIMARY KEY NONCLUSTERED ([ID] ASC)
+);
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DateCreated', @value = N'3/10/2014 2:22:30 PM', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DisplayViewsOnSharePointSite', @value = N'1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'FilterOnLoad', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'HideNewField', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'LastUpdated', @value = N'6/20/2014 1:33:09 PM', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DefaultView', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_OrderByOn', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Orientation', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrderByOnLoad', @value = N'True', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'RecordCount', @value = N'18', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TotalsRow', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Updatable', @value = N'True', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DecimalPlaces', @value = N'255', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DisplayControl', @value = N'109', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'General Number', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'ID', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'ID', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'7', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'ID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DecimalPlaces', @value = N'255', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DisplayControl', @value = N'109', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'General Number', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Fund Number', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Fund Number', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'7', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Fund Number';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'True', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DisplayControl', @value = N'109', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'@', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_IMEMode', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_IMESentMode', @value = N'3', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Insurance name', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'255', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Insurance name', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'10', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'UnicodeCompression', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Insurance name';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DecimalPlaces', @value = N'255', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DisplayControl', @value = N'109', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'General Number', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Rate', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'3', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Rate', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'7', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Rate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'm/d/yyyy', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_IMEMode', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_IMESentMode', @value = N'3', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Valid Start', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'4', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ShowDatePicker', @value = N'1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Valid Start', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid Start';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'm/d/yyyy', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_IMEMode', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_IMESentMode', @value = N'3', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Valid end', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'5', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ShowDatePicker', @value = N'1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Valid end', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Valid end';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'True', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DisplayControl', @value = N'109', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'@', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_IMEMode', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_IMESentMode', @value = N'3', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Drop Down Calc', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'6', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'255', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Drop Down Calc', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'10', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'UnicodeCompression', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Drop Down Calc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DecimalPlaces', @value = N'255', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DisplayControl', @value = N'109', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'General Number', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Allows_MealsMisc', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'7', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Allows_MealsMisc', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'7', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_MealsMisc';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DecimalPlaces', @value = N'255', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DisplayControl', @value = N'109', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'General Number', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Allows_Unloaded', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Allows_Unloaded', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'7', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Unloaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AggregateType', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AllowZeroLength', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AppendOnly', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Attributes', @value = N'2', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'CollatingOrder', @value = N'1033', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnHidden', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnOrder', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'ColumnWidth', @value = N'-1', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'DataUpdatable', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DecimalPlaces', @value = N'255', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_DisplayControl', @value = N'109', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Format', @value = N'General Number', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Name', @value = N'Allows_Loaded', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'OrdinalPosition', @value = N'9', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Required', @value = N'False', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Size', @value = N'8', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceField', @value = N'Allows_Loaded', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SourceTable', @value = N'FMPInsurance_local', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'TextAlign', @value = N'0', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Type', @value = N'7', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'FMPInsurance', @level2type = N'COLUMN', @level2name = N'Allows_Loaded';
+

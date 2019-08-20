@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [AEOA\Tim.Francisco]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

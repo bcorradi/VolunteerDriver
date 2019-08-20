@@ -1,0 +1,3 @@
+﻿CREATE ROLE [test2]
+    AUTHORIZATION [dbo];
+

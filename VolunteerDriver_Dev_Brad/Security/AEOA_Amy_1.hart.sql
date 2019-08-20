@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [AEOA\Amy.hart]
+    FROM WINDOWS WITH DEFAULT_DATABASE = [Rural_RidesSQL], DEFAULT_LANGUAGE = [us_english];
+

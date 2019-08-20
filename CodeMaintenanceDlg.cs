@@ -7,8 +7,14 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using AEOA.Volunteer.Data;
+using System.Configuration;
 
-namespace TelerikWinFormsApp2
+using System.Data.SqlClient;
+using Telerik.WinControls.UI;
+using AEOA.VolunteerDriver;
+
+
+namespace AEOA.VolunteerDriver
 {
     public partial class CodeMaintenanceDlg : Telerik.WinControls.UI.RadTabbedForm
     {
@@ -25,7 +31,7 @@ namespace TelerikWinFormsApp2
             eTripTypes = 7,
             eClientTypes = 8,
             eCancelReasons = 9,
-            eUnloadedReasons = 10
+            eUnloadedReasons = 10            
         }
 
         public CodeMaintenanceDlg()
@@ -42,6 +48,8 @@ namespace TelerikWinFormsApp2
 
         private void CodeMaintenanceDlg_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'volunteer_Dev_BradDataSet.tblInsuranceRules' table. You can move, or remove it, as needed.
+            this.tblInsuranceRulesTableAdapter.Fill(this.volunteer_Dev_BradDataSet.tblInsuranceRules);
             // TODO: This line of code loads data into the 'volunteerDev.ltblCounty' table. You can move, or remove it, as needed.
             //this.ltblCountyTableAdapter.Fill(this.volunteerDev.ltblCounty);
             //          string str = AEOA.VolunteerDriver.Properties.Settings.Default.Volunteer_Dev_BradConnectionString;
@@ -54,6 +62,8 @@ namespace TelerikWinFormsApp2
             //gridMain.MasterTemplate.BestFitColumns();// AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
 
             TcMain_SelectedTabChanged(sender, e);
+
+            this.gridInsurance.RowSourceNeeded += GridInsurance_RowSourceNeeded;
         }
 
         private void TabCounties_Paint(object sender, PaintEventArgs e)
@@ -77,22 +87,48 @@ namespace TelerikWinFormsApp2
             {
                 gridMain.DataSource = County.LoadList(str);
                 gridMain.MasterTemplate.BestFitColumns();
+
+                //DataTable dt = new DataTable();
+                //SqlConnection connection = new SqlConnection(str);
+                //SqlCommand command = new SqlCommand();
+
+                ////command.CommandType = CommandType.StoredProcedure;
+                //command.CommandText = "SELECT * FROM ltblCounty ORDER BY COUNTY";
+
+                //command.Connection = connection;
+                //connection.Open();
+                //SqlDataAdapter da = new SqlDataAdapter(command);
+                //da.Fill(dt);
+                //connection.Close();
+
+                //gridMain.DataSource = dt;
+                
+
+                 
             }
 
             else if (tabValue == Convert.ToInt32(eCodeType.eInsurance))
             {
-                //
-                //gridInsurance.
+
+                gridInsurance.AutoGenerateHierarchy = true;
+                gridInsurance.DataSource = Insurance.LoadList(str);
+                //gridRates.DataSource = 
+                //gridInsurance.Templates[0]
+                //gridInsurance.MasterTemplate.BestFitColumns();                
+
+                
             }
 
             else if (tabValue == Convert.ToInt32(eCodeType.eAddresses))
             {
-                //
+                gridAddresses.DataSource = Address.LoadList(str);
+                gridAddresses.MasterTemplate.BestFitColumns();
             }
 
             else if (tabValue == Convert.ToInt32(eCodeType.eTraining))
             {
-
+                gridTraining.DataSource = Training.LoadList(str);
+                gridTraining.MasterTemplate.BestFitColumns();
             }
 
             else if (tabValue == Convert.ToInt32(eCodeType.eDeadHeadAdjustments))
@@ -108,19 +144,20 @@ namespace TelerikWinFormsApp2
 
             else if (tabValue == Convert.ToInt32(eCodeType.eInsuranceRules))
             {
-
+                gridInsuranceRules.DataSource = InsuranceRule.LoadList(str);
+                gridInsuranceRules.MasterTemplate.BestFitColumns();
             }
 
             else if (tabValue == Convert.ToInt32(eCodeType.eTripTypes))
             {
                 gridTripTypes.DataSource = TripType.LoadList(str);
-                gridClientTypes.MasterTemplate.BestFitColumns();
+                gridTripTypes.MasterTemplate.BestFitColumns();
 
             }
 
             else if (tabValue == Convert.ToInt32(eCodeType.eClientTypes))
             {
-                gridClientTypes.DataSource = TripType.LoadList(str);
+                gridClientTypes.DataSource = ClientType.LoadList(str);
                 gridClientTypes.MasterTemplate.BestFitColumns();
             }
 
@@ -133,9 +170,23 @@ namespace TelerikWinFormsApp2
             else if (tabValue == Convert.ToInt32(eCodeType.eUnloadedReasons))
             {
                 gridUnloadReasons.DataSource = UnloadedReason.LoadList(str);
-                gridUnloadReasons.MasterTemplate.BestFitColumns();
+                gridUnloadReasons.MasterTemplate.BestFitColumns();                
+            }
 
-                
+            //else if (tabValue == Conve)
+        }
+
+        private void GridInsurance_RowSourceNeeded(object sender, Telerik.WinControls.UI.GridViewRowSourceNeededEventArgs e)
+        {
+            Insurance insurance = e.ParentRow.DataBoundItem as Insurance;
+            BindingList<Insurance.Rate> rates = insurance.InsuranceRates;
+
+            foreach (Insurance.Rate r in rates)
+            {
+                GridViewRowInfo row = e.Template.Rows.NewRow();
+                //row.Cells["Title"].Value = r.Title;
+                row.Cells["Id"].Value = r.ID;
+                e.SourceCollection.Add(row);
             }
         }
     }

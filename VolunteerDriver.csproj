@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B45C2E0-211C-439C-9EED-A75E249AB9A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AEOA.VolunteerDriver</RootNamespace>
+    <AssemblyName>Volunteer Driver</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.Barcode.v19.1, Version=19.1.20191.82, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.DataVisualization.Shared.v19.1, Version=19.1.20191.82, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Portable.Core.v19.1, Version=19.1.20191.82, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=13.1.19.618, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=13.1.19.618, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2019.2.618.40.Trial\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadDiagram, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2019.2.618.40.Trial\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Spreadsheet, Version=2019.2.618.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2019.2.612.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2019.2.612.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2019.2.612.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2019.2.612.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2019.2.612.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Zip, Version=2019.2.612.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2019.2.618.40.Trial\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikExport, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlTestForm.Designer.cs">
+      <DependentUpon>ControlTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\AddressGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\AddressGrid.Designer.cs">
+      <DependentUpon>AddressGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeMaintenanceDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeMaintenanceDlg.Designer.cs">
+      <DependentUpon>CodeMaintenanceDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\AddressTypeGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\AddressTypeGrid.Designer.cs">
+      <DependentUpon>AddressTypeGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\AdminReportsGridCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\AdminReportsGridCtrl.Designer.cs">
+      <DependentUpon>AdminReportsGridCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\BaseGridCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\BaseGridCtrl.Designer.cs">
+      <DependentUpon>BaseGridCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\CancelReasonCodesGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\CancelReasonCodesGrid.Designer.cs">
+      <DependentUpon>CancelReasonCodesGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\ClientGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\ClientGrid.Designer.cs">
+      <DependentUpon>ClientGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\ClientTypesGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\ClientTypesGrid.Designer.cs">
+      <DependentUpon>ClientTypesGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\CountiesGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\CountiesGrid.Designer.cs">
+      <DependentUpon>CountiesGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\DateRangeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\DateRangeCtrl.Designer.cs">
+      <DependentUpon>DateRangeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\InsuranceGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\InsuranceGrid.Designer.cs">
+      <DependentUpon>InsuranceGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\InsuranceRulesGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\InsuranceRulesGrid.Designer.cs">
+      <DependentUpon>InsuranceRulesGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\MultipleDriverReimbursementRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\MultipleDriverReimbursementRpt.Designer.cs">
+      <DependentUpon>MultipleDriverReimbursementRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\ReportViewerCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\ReportViewerCtrl.Designer.cs">
+      <DependentUpon>ReportViewerCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\ScheduleTripGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\ScheduleTripGrid.Designer.cs">
+      <DependentUpon>ScheduleTripGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\TrainingGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\TrainingGrid.Designer.cs">
+      <DependentUpon>TrainingGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\TripLogTypeCodesGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\TripLogTypeCodesGrid.Designer.cs">
+      <DependentUpon>TripLogTypeCodesGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\TripTypesGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\TripTypesGrid.Designer.cs">
+      <DependentUpon>TripTypesGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\UnloadedReasonCodesGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\UnloadedReasonCodesGrid.Designer.cs">
+      <DependentUpon>UnloadedReasonCodesGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntryDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntryDlg.Designer.cs">
+      <DependentUpon>DataEntryDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\DriverGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\DriverGrid.Designer.cs">
+      <DependentUpon>DriverGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadForm1.Designer.cs">
+      <DependentUpon>RadForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestNavigationDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestNavigationDlg.Designer.cs">
+      <DependentUpon>TestNavigationDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\TitleBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\TitleBarControl.Designer.cs" />
+    <Compile Include="Custom Controls\TopControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\TopControl.Designer.cs" />
+    <Compile Include="VolunteerDriver.cs" />
+    <Compile Include="Volunteer_Dev_BradDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Volunteer_Dev_BradDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ControlTestForm.resx">
+      <DependentUpon>ControlTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\AddressGrid.resx">
+      <DependentUpon>AddressGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeMaintenanceDlg.resx">
+      <DependentUpon>CodeMaintenanceDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\AddressTypeGrid.resx">
+      <DependentUpon>AddressTypeGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\AdminReportsGridCtrl.resx">
+      <DependentUpon>AdminReportsGridCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\BaseGridCtrl.resx">
+      <DependentUpon>BaseGridCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\CancelReasonCodesGrid.resx">
+      <DependentUpon>CancelReasonCodesGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\ClientGrid.resx">
+      <DependentUpon>ClientGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\ClientTypesGrid.resx">
+      <DependentUpon>ClientTypesGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\CountiesGrid.resx">
+      <DependentUpon>CountiesGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\DateRangeCtrl.resx">
+      <DependentUpon>DateRangeCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\InsuranceGrid.resx">
+      <DependentUpon>InsuranceGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\InsuranceRulesGrid.resx">
+      <DependentUpon>InsuranceRulesGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\MultipleDriverReimbursementRpt.resx">
+      <DependentUpon>MultipleDriverReimbursementRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\ReportViewerCtrl.resx">
+      <DependentUpon>ReportViewerCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\ScheduleTripGrid.resx">
+      <DependentUpon>ScheduleTripGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\TrainingGrid.resx">
+      <DependentUpon>TrainingGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\TripLogTypeCodesGrid.resx">
+      <DependentUpon>TripLogTypeCodesGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\TripTypesGrid.resx">
+      <DependentUpon>TripTypesGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\UnloadedReasonCodesGrid.resx">
+      <DependentUpon>UnloadedReasonCodesGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntryDlg.resx">
+      <DependentUpon>DataEntryDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RadForm1.resx">
+      <DependentUpon>RadForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestNavigationDlg.resx">
+      <DependentUpon>TestNavigationDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\TitleBarControl.resx" />
+    <EmbeddedResource Include="Custom Controls\TopControl.resx" />
+    <None Include="app.manifest" />
+    <None Include="Dataset.xsc">
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset.xss">
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.Address.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.BaseTable.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.CancelReason.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.ClientType.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.County.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.Insurance+Rate.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.Insurance+Rule.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.Insurance.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.InsuranceRule.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.Training.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.TripLogType.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.TripType.datasource" />
+    <None Include="Properties\DataSources\AEOA.Volunteer.Data.UnloadedReason.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Volunteer_Dev_BradDataSet.xsc">
+      <DependentUpon>Volunteer_Dev_BradDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Volunteer_Dev_BradDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Volunteer_Dev_BradDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Volunteer_Dev_BradDataSet.xss">
+      <DependentUpon>Volunteer_Dev_BradDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--sirinie -->
+    <ProjectReference Include="..\..\..\..\..\My Old Source\Bankoe Source\Bankoe.StandardLibrary\Bankoe.StandardLibrary.csproj">
+      <Project>{24D86EA9-B230-418E-A4B3-FDA28DD902D2}</Project>
+      <Name>Bankoe.StandardLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AEOA.Volunteer.Data\AEOA.Volunteer.Data.csproj">
+      <Project>{f6e31154-18ec-4ff6-b984-11302441189b}</Project>
+      <Name>AEOA.Volunteer.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ShouldAddDPIScalingManifest="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

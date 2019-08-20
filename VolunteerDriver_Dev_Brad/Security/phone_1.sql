@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [phone]
+    WITH PASSWORD = N'@3Mvji{V1ac_j%s2gkcm,:tdmsFT7_&#$!~<ipdwwyYeq@rf', SID = 0xEF769FAB5FF67D4ABF85019289209109, DEFAULT_DATABASE = [Volunteer_DriversSQL], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

@@ -1,0 +1,2 @@
+﻿CREATE USER [AEOA\test1] FOR LOGIN [AEOA\test1];
+
