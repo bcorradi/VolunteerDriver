@@ -26,7 +26,7 @@ namespace AEOA.VolunteerDriver.Custom_Controls
             AddClick += new EventHandler(Add_Click);
 
             GridView.BestFitColumns();
-            GridView.DataSource =  Driver.LoadList(VolunteerDriver.ConnectionString);
+            //GridView.DataSource =  Driver.LoadList(VolunteerDriver.ConnectionString);
             
         }
 

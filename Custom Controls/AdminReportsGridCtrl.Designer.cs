@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition13 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewRelation gridViewRelation1 = new Telerik.WinControls.UI.GridViewRelation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminReportsGridCtrl));
             this.gridMain = new Telerik.WinControls.UI.RadGridView();
@@ -67,7 +67,7 @@
             this.gridMain.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.gridMain.MasterTemplate.DataSource = this.tblAddressBindingSource1;
             this.gridMain.MasterTemplate.EnableFiltering = true;
-            this.gridMain.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gridMain.MasterTemplate.ViewDefinition = tableViewDefinition13;
             this.gridMain.Name = "gridMain";
             this.gridMain.ReadOnly = true;
             gridViewRelation1.ChildColumnNames = ((System.Collections.Specialized.StringCollection)(resources.GetObject("gridViewRelation1.ChildColumnNames")));

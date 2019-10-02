@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn3 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn3 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn4 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn5 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn4 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn4 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition145 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn49 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn49 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn50 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn61 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn51 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn50 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn51 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn62 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn63 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn64 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn65 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn52 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn25 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn26 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn52 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition147 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewRelation gridViewRelation1 = new Telerik.WinControls.UI.GridViewRelation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CodeMaintenanceDlg));
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition5 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition6 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition7 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition8 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition9 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition10 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition11 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition12 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition146 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition148 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition149 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition150 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition151 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition152 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition153 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition154 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition155 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition156 = new Telerik.WinControls.UI.TableViewDefinition();
             this.tcMain = new Telerik.WinControls.UI.RadTabbedFormControl();
             this.tabCounties = new Telerik.WinControls.UI.RadTabbedFormControlTab();
             this.gridMain = new Telerik.WinControls.UI.RadGridView();
@@ -168,7 +168,7 @@
             // 
             // 
             // 
-            this.gridMain.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gridMain.MasterTemplate.ViewDefinition = tableViewDefinition145;
             this.gridMain.Name = "gridMain";
             this.gridMain.ReadOnly = true;
             this.gridMain.Size = new System.Drawing.Size(2653, 1235);
@@ -190,91 +190,91 @@
             // 
             // 
             // 
-            gridViewDecimalColumn1.DataType = typeof(int);
-            gridViewDecimalColumn1.FieldName = "InsuranceRulesID";
-            gridViewDecimalColumn1.HeaderText = "InsuranceRulesID";
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.Name = "InsuranceRulesID";
-            gridViewDecimalColumn1.ReadOnly = true;
-            gridViewDateTimeColumn1.FieldName = "BegDate";
-            gridViewDateTimeColumn1.HeaderText = "BegDate";
-            gridViewDateTimeColumn1.IsAutoGenerated = true;
-            gridViewDateTimeColumn1.Name = "BegDate";
-            gridViewDateTimeColumn2.FieldName = "EndDate";
-            gridViewDateTimeColumn2.HeaderText = "EndDate";
-            gridViewDateTimeColumn2.IsAutoGenerated = true;
-            gridViewDateTimeColumn2.Name = "EndDate";
-            gridViewCheckBoxColumn1.FieldName = "Active";
-            gridViewCheckBoxColumn1.HeaderText = "Active";
-            gridViewCheckBoxColumn1.IsAutoGenerated = true;
-            gridViewCheckBoxColumn1.Name = "Active";
-            gridViewDateTimeColumn3.FieldName = "EntryDate";
-            gridViewDateTimeColumn3.HeaderText = "EntryDate";
-            gridViewDateTimeColumn3.IsAutoGenerated = true;
-            gridViewDateTimeColumn3.Name = "EntryDate";
-            gridViewDecimalColumn2.DataType = typeof(int);
-            gridViewDecimalColumn2.FieldName = "InsuranceProviderID";
-            gridViewDecimalColumn2.HeaderText = "InsuranceProviderID";
-            gridViewDecimalColumn2.IsAutoGenerated = true;
-            gridViewDecimalColumn2.Name = "InsuranceProviderID";
-            gridViewDecimalColumn3.DataType = typeof(int);
-            gridViewDecimalColumn3.FieldName = "FMPInsuranceID";
-            gridViewDecimalColumn3.HeaderText = "FMPInsuranceID";
-            gridViewDecimalColumn3.IsAutoGenerated = true;
-            gridViewDecimalColumn3.Name = "FMPInsuranceID";
-            gridViewCheckBoxColumn2.FieldName = "AllowsMeals";
-            gridViewCheckBoxColumn2.HeaderText = "AllowsMeals";
-            gridViewCheckBoxColumn2.IsAutoGenerated = true;
-            gridViewCheckBoxColumn2.Name = "AllowsMeals";
-            gridViewCheckBoxColumn3.FieldName = "AllowUnloadedMiles";
-            gridViewCheckBoxColumn3.HeaderText = "AllowUnloadedMiles";
-            gridViewCheckBoxColumn3.IsAutoGenerated = true;
-            gridViewCheckBoxColumn3.Name = "AllowUnloadedMiles";
-            gridViewCheckBoxColumn4.FieldName = "MNDOTAllow";
-            gridViewCheckBoxColumn4.HeaderText = "MNDOTAllow";
-            gridViewCheckBoxColumn4.IsAutoGenerated = true;
-            gridViewCheckBoxColumn4.Name = "MNDOTAllow";
-            gridViewCheckBoxColumn5.FieldName = "RequireAuthIDandRep";
-            gridViewCheckBoxColumn5.HeaderText = "RequireAuthIDandRep";
-            gridViewCheckBoxColumn5.IsAutoGenerated = true;
-            gridViewCheckBoxColumn5.Name = "RequireAuthIDandRep";
-            gridViewDecimalColumn4.DataType = typeof(int);
-            gridViewDecimalColumn4.FieldName = "RuleID";
-            gridViewDecimalColumn4.HeaderText = "RuleID";
-            gridViewDecimalColumn4.IsAutoGenerated = true;
-            gridViewDecimalColumn4.Name = "RuleID";
-            gridViewTextBoxColumn1.FieldName = "UserCreated";
-            gridViewTextBoxColumn1.HeaderText = "UserCreated";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "UserCreated";
-            gridViewTextBoxColumn2.FieldName = "UserUpdated";
-            gridViewTextBoxColumn2.HeaderText = "UserUpdated";
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "UserUpdated";
-            gridViewDateTimeColumn4.FieldName = "DateUpdated";
-            gridViewDateTimeColumn4.HeaderText = "DateUpdated";
-            gridViewDateTimeColumn4.IsAutoGenerated = true;
-            gridViewDateTimeColumn4.Name = "DateUpdated";
+            gridViewDecimalColumn49.DataType = typeof(int);
+            gridViewDecimalColumn49.FieldName = "InsuranceRulesID";
+            gridViewDecimalColumn49.HeaderText = "InsuranceRulesID";
+            gridViewDecimalColumn49.IsAutoGenerated = true;
+            gridViewDecimalColumn49.Name = "InsuranceRulesID";
+            gridViewDecimalColumn49.ReadOnly = true;
+            gridViewDateTimeColumn49.FieldName = "BegDate";
+            gridViewDateTimeColumn49.HeaderText = "BegDate";
+            gridViewDateTimeColumn49.IsAutoGenerated = true;
+            gridViewDateTimeColumn49.Name = "BegDate";
+            gridViewDateTimeColumn50.FieldName = "EndDate";
+            gridViewDateTimeColumn50.HeaderText = "EndDate";
+            gridViewDateTimeColumn50.IsAutoGenerated = true;
+            gridViewDateTimeColumn50.Name = "EndDate";
+            gridViewCheckBoxColumn61.FieldName = "Active";
+            gridViewCheckBoxColumn61.HeaderText = "Active";
+            gridViewCheckBoxColumn61.IsAutoGenerated = true;
+            gridViewCheckBoxColumn61.Name = "Active";
+            gridViewDateTimeColumn51.FieldName = "EntryDate";
+            gridViewDateTimeColumn51.HeaderText = "EntryDate";
+            gridViewDateTimeColumn51.IsAutoGenerated = true;
+            gridViewDateTimeColumn51.Name = "EntryDate";
+            gridViewDecimalColumn50.DataType = typeof(int);
+            gridViewDecimalColumn50.FieldName = "InsuranceProviderID";
+            gridViewDecimalColumn50.HeaderText = "InsuranceProviderID";
+            gridViewDecimalColumn50.IsAutoGenerated = true;
+            gridViewDecimalColumn50.Name = "InsuranceProviderID";
+            gridViewDecimalColumn51.DataType = typeof(int);
+            gridViewDecimalColumn51.FieldName = "FMPInsuranceID";
+            gridViewDecimalColumn51.HeaderText = "FMPInsuranceID";
+            gridViewDecimalColumn51.IsAutoGenerated = true;
+            gridViewDecimalColumn51.Name = "FMPInsuranceID";
+            gridViewCheckBoxColumn62.FieldName = "AllowsMeals";
+            gridViewCheckBoxColumn62.HeaderText = "AllowsMeals";
+            gridViewCheckBoxColumn62.IsAutoGenerated = true;
+            gridViewCheckBoxColumn62.Name = "AllowsMeals";
+            gridViewCheckBoxColumn63.FieldName = "AllowUnloadedMiles";
+            gridViewCheckBoxColumn63.HeaderText = "AllowUnloadedMiles";
+            gridViewCheckBoxColumn63.IsAutoGenerated = true;
+            gridViewCheckBoxColumn63.Name = "AllowUnloadedMiles";
+            gridViewCheckBoxColumn64.FieldName = "MNDOTAllow";
+            gridViewCheckBoxColumn64.HeaderText = "MNDOTAllow";
+            gridViewCheckBoxColumn64.IsAutoGenerated = true;
+            gridViewCheckBoxColumn64.Name = "MNDOTAllow";
+            gridViewCheckBoxColumn65.FieldName = "RequireAuthIDandRep";
+            gridViewCheckBoxColumn65.HeaderText = "RequireAuthIDandRep";
+            gridViewCheckBoxColumn65.IsAutoGenerated = true;
+            gridViewCheckBoxColumn65.Name = "RequireAuthIDandRep";
+            gridViewDecimalColumn52.DataType = typeof(int);
+            gridViewDecimalColumn52.FieldName = "RuleID";
+            gridViewDecimalColumn52.HeaderText = "RuleID";
+            gridViewDecimalColumn52.IsAutoGenerated = true;
+            gridViewDecimalColumn52.Name = "RuleID";
+            gridViewTextBoxColumn25.FieldName = "UserCreated";
+            gridViewTextBoxColumn25.HeaderText = "UserCreated";
+            gridViewTextBoxColumn25.IsAutoGenerated = true;
+            gridViewTextBoxColumn25.Name = "UserCreated";
+            gridViewTextBoxColumn26.FieldName = "UserUpdated";
+            gridViewTextBoxColumn26.HeaderText = "UserUpdated";
+            gridViewTextBoxColumn26.IsAutoGenerated = true;
+            gridViewTextBoxColumn26.Name = "UserUpdated";
+            gridViewDateTimeColumn52.FieldName = "DateUpdated";
+            gridViewDateTimeColumn52.HeaderText = "DateUpdated";
+            gridViewDateTimeColumn52.IsAutoGenerated = true;
+            gridViewDateTimeColumn52.Name = "DateUpdated";
             this.gridInsurance.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
-            gridViewDateTimeColumn1,
-            gridViewDateTimeColumn2,
-            gridViewCheckBoxColumn1,
-            gridViewDateTimeColumn3,
-            gridViewDecimalColumn2,
-            gridViewDecimalColumn3,
-            gridViewCheckBoxColumn2,
-            gridViewCheckBoxColumn3,
-            gridViewCheckBoxColumn4,
-            gridViewCheckBoxColumn5,
-            gridViewDecimalColumn4,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewDateTimeColumn4});
+            gridViewDecimalColumn49,
+            gridViewDateTimeColumn49,
+            gridViewDateTimeColumn50,
+            gridViewCheckBoxColumn61,
+            gridViewDateTimeColumn51,
+            gridViewDecimalColumn50,
+            gridViewDecimalColumn51,
+            gridViewCheckBoxColumn62,
+            gridViewCheckBoxColumn63,
+            gridViewCheckBoxColumn64,
+            gridViewCheckBoxColumn65,
+            gridViewDecimalColumn52,
+            gridViewTextBoxColumn25,
+            gridViewTextBoxColumn26,
+            gridViewDateTimeColumn52});
             this.gridInsurance.MasterTemplate.DataSource = this.tblInsuranceRulesBindingSource;
             this.gridInsurance.MasterTemplate.Templates.AddRange(new Telerik.WinControls.UI.GridViewTemplate[] {
             this.gridRates});
-            this.gridInsurance.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.gridInsurance.MasterTemplate.ViewDefinition = tableViewDefinition147;
             this.gridInsurance.Name = "gridInsurance";
             this.gridInsurance.ReadOnly = true;
             gridViewRelation1.ChildColumnNames = ((System.Collections.Specialized.StringCollection)(resources.GetObject("gridViewRelation1.ChildColumnNames")));
@@ -298,7 +298,7 @@
             // 
             // gridRates
             // 
-            this.gridRates.ViewDefinition = tableViewDefinition2;
+            this.gridRates.ViewDefinition = tableViewDefinition146;
             // 
             // tabAddresses
             // 
@@ -316,7 +316,7 @@
             // 
             // 
             // 
-            this.gridAddresses.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.gridAddresses.MasterTemplate.ViewDefinition = tableViewDefinition148;
             this.gridAddresses.Name = "gridAddresses";
             this.gridAddresses.ReadOnly = true;
             this.gridAddresses.Size = new System.Drawing.Size(2653, 1235);
@@ -338,7 +338,7 @@
             // 
             // 
             // 
-            this.gridTraining.MasterTemplate.ViewDefinition = tableViewDefinition5;
+            this.gridTraining.MasterTemplate.ViewDefinition = tableViewDefinition149;
             this.gridTraining.Name = "gridTraining";
             this.gridTraining.ReadOnly = true;
             this.gridTraining.Size = new System.Drawing.Size(2653, 1235);
@@ -360,7 +360,7 @@
             // 
             // 
             // 
-            this.gridDeadHeadAdjustments.MasterTemplate.ViewDefinition = tableViewDefinition6;
+            this.gridDeadHeadAdjustments.MasterTemplate.ViewDefinition = tableViewDefinition150;
             this.gridDeadHeadAdjustments.Name = "gridDeadHeadAdjustments";
             this.gridDeadHeadAdjustments.ReadOnly = true;
             this.gridDeadHeadAdjustments.Size = new System.Drawing.Size(2653, 1235);
@@ -382,7 +382,7 @@
             // 
             // 
             // 
-            this.gridTripLogTypes.MasterTemplate.ViewDefinition = tableViewDefinition7;
+            this.gridTripLogTypes.MasterTemplate.ViewDefinition = tableViewDefinition151;
             this.gridTripLogTypes.Name = "gridTripLogTypes";
             this.gridTripLogTypes.ReadOnly = true;
             this.gridTripLogTypes.Size = new System.Drawing.Size(2653, 1235);
@@ -404,7 +404,7 @@
             // 
             // 
             // 
-            this.gridInsuranceRules.MasterTemplate.ViewDefinition = tableViewDefinition8;
+            this.gridInsuranceRules.MasterTemplate.ViewDefinition = tableViewDefinition152;
             this.gridInsuranceRules.Name = "gridInsuranceRules";
             this.gridInsuranceRules.ReadOnly = true;
             this.gridInsuranceRules.Size = new System.Drawing.Size(2653, 1235);
@@ -426,7 +426,7 @@
             // 
             // 
             // 
-            this.gridTripTypes.MasterTemplate.ViewDefinition = tableViewDefinition9;
+            this.gridTripTypes.MasterTemplate.ViewDefinition = tableViewDefinition153;
             this.gridTripTypes.Name = "gridTripTypes";
             this.gridTripTypes.ReadOnly = true;
             this.gridTripTypes.Size = new System.Drawing.Size(2653, 1235);
@@ -448,7 +448,7 @@
             // 
             // 
             // 
-            this.gridClientTypes.MasterTemplate.ViewDefinition = tableViewDefinition10;
+            this.gridClientTypes.MasterTemplate.ViewDefinition = tableViewDefinition154;
             this.gridClientTypes.Name = "gridClientTypes";
             this.gridClientTypes.ReadOnly = true;
             this.gridClientTypes.Size = new System.Drawing.Size(2653, 1235);
@@ -470,7 +470,7 @@
             // 
             // 
             // 
-            this.gridCancelReasons.MasterTemplate.ViewDefinition = tableViewDefinition11;
+            this.gridCancelReasons.MasterTemplate.ViewDefinition = tableViewDefinition155;
             this.gridCancelReasons.Name = "gridCancelReasons";
             this.gridCancelReasons.ReadOnly = true;
             this.gridCancelReasons.Size = new System.Drawing.Size(2653, 1235);
@@ -493,7 +493,7 @@
             // 
             // 
             // 
-            this.gridUnloadReasons.MasterTemplate.ViewDefinition = tableViewDefinition12;
+            this.gridUnloadReasons.MasterTemplate.ViewDefinition = tableViewDefinition156;
             this.gridUnloadReasons.Name = "gridUnloadReasons";
             this.gridUnloadReasons.ReadOnly = true;
             this.gridUnloadReasons.Size = new System.Drawing.Size(2653, 1235);
@@ -505,7 +505,7 @@
             // 
             // CodeMaintenanceDlg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2655, 1267);
             this.Controls.Add(this.tcMain);

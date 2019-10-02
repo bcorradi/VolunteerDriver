@@ -16,9 +16,11 @@ using Telerik.WinControls.UI;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
+using Bankoe.StandardLibrary;
 using AEOA.VolunteerDriver.Custom_Controls;
 using AEOA.Volunteer.Data;
 using Telerik.WinControls.Data;
+using EdiFabric.Examples.X12.T837P;
 
 namespace AEOA.VolunteerDriver
 {
@@ -232,6 +234,27 @@ namespace AEOA.VolunteerDriver
         private void MainForm_Load(object sender, EventArgs e)
         {
             //treeNavigation.CollapseAll();
+
+            pvMain.SelectedPage = pgClaimExport;
+
+            //dtpInsuranceStartDate.Value = ;
+            //dtpInsuranceEndDate.Value = '07/31/2019';
+
+            
+
+
+            List<IDName> list = new List<IDName>();
+
+            list.Add(new IDName(2, "Blue Cross"));
+            list.Add(new IDName(4, "Medica"));
+            list.Add(new IDName(5, "UCare"));
+            list.Add(new IDName(29, "Health Partners"));
+
+
+            cbInsurance.DataSource = list;
+
+            dtpInsuranceStartDate.Value = new DateTime(2019, 8, 1);
+            dtpInsuranceEndDate.Value   = new DateTime(2019, 8, 31);
         }
 
         private void RadButton2_Click(object sender, EventArgs e)
@@ -404,7 +427,152 @@ namespace AEOA.VolunteerDriver
 
         private void RadButton1_Click_2(object sender, EventArgs e)
         {
-            Claim.CreateClaim(VolunteerDriver.ConnectionString, 165434);
+            List<Claim> claimList = new List<Claim>();
+            int tripID;
+            Claim claim = null;
+
+            BindingList<Insurance> insuranceList = Insurance.LoadList(VolunteerDriver.ConnectionString);
+            List<AddressType> addressTypesList = AddressType.LoadList(VolunteerDriver.ConnectionString);
+
+            List<ProviderEDITransactionDetail> providerEDIList = new List<ProviderEDITransactionDetail>();
+            //Payee payee = new Payee("Arrowhead Transit", "", "", "", "", "", "", "223387853", "416052144", "", "2187356813", "IGI Health");
+
+            //providerEDIList.Add(new ProviderEDITransactionDetail(2, "", "", "416052144", "", "XX", "MC", "PO BOX 64560", "", "St. Paul", "MN", "55164-0560", "R68.89", "A0080", true, "A0100", 10, "A0110",  false, "TP", "99")); // BlueCorss
+            //providerEDIList.Add(new ProviderEDITransactionDetail(4, "1801114301", "1801114301", "416052144", "", "XX", "", "Route 2901", "PO Box 30990", "Salt Lake City", "UT", "84130", "R68.89", "A0080", false, "", 0, "A0110", false, "", "99")); // Medica
+            //providerEDIList.Add(new ProviderEDITransactionDetail(5, "198223", "1801114301", "416052144", "", "", "", "PPO Box 52", "", "Minneapolis", "MN", "55440-0052", "Z00.8", "A0080", false, "", 0, "A0110", false, "52", "99")); // UCare
+            //providerEDIList.Add(new ProviderEDITransactionDetail(29, "55765*1801114301", "1801114301", "416052144", "", "XX", "", "PO Box 1309", "", "Minneapolis", "MN", "55440-1309", "R68.89", "A0080", false, "", 0, "A0110", false, "TP", "99")); // Health Partners
+
+
+
+
+
+            //claim = Claim.CreateClaim(VolunteerDriver.ConnectionString, 219112);
+
+            //if (claim != null)
+            //    list.Add(claim);
+
+            //claim = Claim.CreateClaim(VolunteerDriver.ConnectionString, 219867);
+
+            //if (claim != null)
+            //    list.Add(claim);
+
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, list, 222070); // UCARE Example of trip that didn't need to be combined
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, list, 222100);  // UCARE Example of combining a trip with duplicate dropoff and pickup address types (PP) on single leg
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, list, 220095); // UCARE Example of combining a trip with duplicate dropoff and pickup address types (HH) on single leg
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 220699); // UCARE Example of combining a two trips on the same day for Bradley Vos 
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 220701); // UCARE Example of combining a two trips on the same day for Bradley Vos 
+
+
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 221317); // UCARE Example of combining a two trips on the same day for Bradley Vos 
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 222463); // UCARE Example of combining a two trips on the same day for Bradley Vos 
+
+            Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 224255); // UCARE Example of combining a two trips on the same day for Bradley Vos 
+            Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 224244); // UCARE Example of combining a two trips on the same day for Bradley Vos 
+
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, list, 220322); 
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, list, 221777);
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, list, 221779);
+
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, list, 219994);
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 220471);
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 221194);
+
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 222793);
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 222531);
+
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 219141);
+            //Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, 223598);
+
+            IDName insurance = cbInsurance.SelectedItem as IDName;
+            //DateTime startDate = dtpInsuranceStartDate.Value;
+
+
+
+            using (SqlConnection con = new SqlConnection(VolunteerDriver.ConnectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = con.CreateCommand())
+                {
+                    //bjc These are the ones that haven't been exported
+                    //cmd.CommandText = string.Format("Select distinct t.tripid from tblride r inner join tbltrip t on r.TripID = t.tripid where r.InsuranceID = {0} and (r.ridedate between '{1}' and '{2}') AND t.DateReceived IS NOT NULL " +
+                    //                  "and t.tripcanceled = 0 AND t.TripTypeID <> '6' AND t.TripID not in (select TripID from EzClaimTripLink where Claimid is not null) order by t.tripid asc", insurance.ID, dtpInsuranceStartDate.Value.Date, dtpInsuranceEndDate.Value.Date);
+
+                    // haven't been exported including buses
+                    cmd.CommandText = string.Format("Select distinct t.tripid from tblride r inner join tbltrip t on r.TripID = t.tripid where r.InsuranceID = {0} and (r.ridedate between '{1}' and '{2}') AND t.DateReceived IS NOT NULL " +
+                    "and t.tripcanceled = 0 AND t.TripID not in (select TripID from EzClaimTripLink where Claimid is not null) order by t.tripid asc", insurance.ID, dtpInsuranceStartDate.Value.Date, dtpInsuranceEndDate.Value.Date);
+
+                    //bjc These are the ones that have been exported
+                    //cmd.CommandText = string.Format("Select distinct t.tripid from tblride r inner join tbltrip t on r.TripID = t.tripid where r.InsuranceID = {0} and (r.ridedate between '{1}' and '{2}') AND t.DateReceived IS NOT NULL " +
+                    //                  "and t.tripcanceled = 0 AND t.TripTypeID <> '6' AND t.TripID not in (select TripID from EzClaimTripLink where Claimid is null) order by t.tripid asc", insurance.ID, dtpInsuranceStartDate.Value.Date, dtpInsuranceEndDate.Value.Date);
+
+                    //cmd.CommandText = string.Format("Select distinct t.tripid from tblride r inner join tbltrip t on r.TripID = t.tripid where r.InsuranceID = {0} and (r.ridedate between '{1}' and '{2}') AND t.DateReceived IS NOT NULL " +
+                    //"and t.tripcanceled = 0 AND t.TripTypeID <> '6' AND t.TripID not in (select TripID from EzClaimTripLink where Claimid is null) order by t.tripid asc", insurance.ID, dtpInsuranceStartDate.Value.Date, dtpInsuranceEndDate.Value.Date);
+
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            tripID = BKSqlData.GetInt32(rdr, "TripID");
+
+                            Claim.CreateClaim(VolunteerDriver.ConnectionString, claimList, insuranceList, addressTypesList, tripID);
+                        }
+                    }
+                    con.Close();
+                }
+            }
+
+            lblClaimCount.Text = string.Format("Claim Count:  {0}", claimList.Count);
+            gridClaims.DataSource = claimList;
+
+            gridClaims.MasterTemplate.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
+            gridClaims.MasterTemplate.Columns["ClaimDetails"].IsVisible = false;
+            gridClaims.MasterTemplate.Columns["TotalAmount"].FormatString = "{0:C}";
+            gridClaims.MasterTemplate.Columns["AmountPaid"].FormatString = "{0:C}";
+            gridClaims.MasterTemplate.Columns["InsuranceRate"].FormatString = "{0:C}";
+            gridClaims.MasterTemplate.Columns["ClaimDate"].FormatString = "{0:MM/dd/yyyy}";
+
+
+
+            if (gridClaims.Templates.Count > 0)
+            {
+                gridClaims.Templates[0].AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
+
+                //if (gridClaims.Templates[0].ColumnCount > 0)
+                //{
+
+                if (gridClaims.Templates[0].ColumnCount > 0)
+                {
+                    gridClaims.Templates[0].Columns["TotalCharge"].FormatString = "{0:C}";
+                    gridClaims.Templates[0].Columns["AmountPaid"].FormatString = "{0:C}";
+                    gridClaims.Templates[0].Columns["RideStartDT"].FormatString = "{0:h:mm tt}";
+                    gridClaims.Templates[0].Columns["RideEndDT"].FormatString = "{0:h:mm tt}";
+                }
+            }
+
+
+            //Claim.FormatColumns(gridClaims);
+
+//            Payee p = new Payee("ARROWHEAD TRANSIT", "702 S 3RD AVE", "", "VIRGINIA", "MN", "557922776", "ZZ", "AV09311993", "030240928", "030240928", "AV01101957", "RYAN ZINTER", "TE", "2187356813", "AVAILITY");
+
+            _837Submitter Submitter_837 = new _837Submitter("41", "2", "AEOA", "46", "41-6052144", "IC", "RYAN ZINTER", "TE", "2187356813");
+
+            _837StaticOutput _837 = new _837StaticOutput(_837StaticOutput.eProvider.BlueCross, _837StaticOutput.eMode.Test);
+
+
+            _837StaticOutput a = new _837StaticOutput(_837StaticOutput.eProvider.BlueCross, _837StaticOutput.eMode.Test);
+                        
+
+            //EVVExample.Write(claimList);
+        }
+
+        private void RadButton2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void RadDateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

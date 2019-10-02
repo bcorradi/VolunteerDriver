@@ -79,11 +79,20 @@
             this.pgClaimExport = new Telerik.WinControls.UI.RadPageViewPage();
             this.pvClaimExport = new Telerik.WinControls.UI.RadPageView();
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
+            this.gridClaims = new Telerik.WinControls.UI.RadGridView();
+            this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.lblClaimCount = new Telerik.WinControls.UI.RadLabel();
+            this.cbInsurance = new System.Windows.Forms.ComboBox();
+            this.dtpInsuranceEndDate = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.lblInsurance = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.dtpInsuranceStartDate = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.pvMain)).BeginInit();
             this.pvMain.SuspendLayout();
             this.pageViewScheduledTrips.SuspendLayout();
@@ -124,10 +133,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pvClaimExport)).BeginInit();
             this.pvClaimExport.SuspendLayout();
             this.radPageViewPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
+            this.radPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClaims)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClaims.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
+            this.radPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblClaimCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpInsuranceEndDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblInsurance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpInsuranceStartDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -269,9 +288,9 @@
             // pgAddresses
             // 
             this.pgAddresses.Controls.Add(this.addressGrid1);
-            this.pgAddresses.Location = new System.Drawing.Point(10, 33);
+            this.pgAddresses.Location = new System.Drawing.Point(10, 37);
             this.pgAddresses.Name = "pgAddresses";
-            this.pgAddresses.Size = new System.Drawing.Size(1853, 1139);
+            this.pgAddresses.Size = new System.Drawing.Size(1853, 1135);
             this.pgAddresses.Text = "Addresses";
             // 
             // addressGrid1
@@ -280,7 +299,7 @@
             this.addressGrid1.Location = new System.Drawing.Point(0, 0);
             this.addressGrid1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addressGrid1.Name = "addressGrid1";
-            this.addressGrid1.Size = new System.Drawing.Size(1853, 1139);
+            this.addressGrid1.Size = new System.Drawing.Size(1853, 1135);
             this.addressGrid1.TabIndex = 0;
             // 
             // pgAddressTypes
@@ -580,24 +599,127 @@
             // 
             // radPageViewPage1
             // 
-            this.radPageViewPage1.Controls.Add(this.radButton1);
-            this.radPageViewPage1.Controls.Add(this.radGridView1);
+            this.radPageViewPage1.Controls.Add(this.radPanel2);
+            this.radPageViewPage1.Controls.Add(this.radPanel1);
             this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(112F, 28F);
             this.radPageViewPage1.Location = new System.Drawing.Point(10, 37);
             this.radPageViewPage1.Name = "radPageViewPage1";
             this.radPageViewPage1.Size = new System.Drawing.Size(1853, 1135);
             this.radPageViewPage1.Text = "radPageViewPage1";
             // 
-            // radGridView1
+            // radPanel2
             // 
-            this.radGridView1.Location = new System.Drawing.Point(267, 257);
+            this.radPanel2.Controls.Add(this.gridClaims);
+            this.radPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radPanel2.Location = new System.Drawing.Point(0, 150);
+            this.radPanel2.Name = "radPanel2";
+            this.radPanel2.Size = new System.Drawing.Size(1853, 985);
+            this.radPanel2.TabIndex = 1;
+            // 
+            // gridClaims
+            // 
+            this.gridClaims.AutoGenerateHierarchy = true;
+            this.gridClaims.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridClaims.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition4;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.Size = new System.Drawing.Size(1336, 667);
-            this.radGridView1.TabIndex = 0;
+            this.gridClaims.MasterTemplate.EnableFiltering = true;
+            this.gridClaims.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.gridClaims.Name = "gridClaims";
+            this.gridClaims.ReadOnly = true;
+            this.gridClaims.Size = new System.Drawing.Size(1853, 985);
+            this.gridClaims.TabIndex = 3;
+            // 
+            // radPanel1
+            // 
+            this.radPanel1.Controls.Add(this.lblClaimCount);
+            this.radPanel1.Controls.Add(this.cbInsurance);
+            this.radPanel1.Controls.Add(this.dtpInsuranceEndDate);
+            this.radPanel1.Controls.Add(this.lblInsurance);
+            this.radPanel1.Controls.Add(this.radLabel2);
+            this.radPanel1.Controls.Add(this.radLabel1);
+            this.radPanel1.Controls.Add(this.dtpInsuranceStartDate);
+            this.radPanel1.Controls.Add(this.radButton1);
+            this.radPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radPanel1.Location = new System.Drawing.Point(0, 0);
+            this.radPanel1.Name = "radPanel1";
+            this.radPanel1.Size = new System.Drawing.Size(1853, 150);
+            this.radPanel1.TabIndex = 0;
+            // 
+            // lblClaimCount
+            // 
+            this.lblClaimCount.Location = new System.Drawing.Point(610, 113);
+            this.lblClaimCount.Name = "lblClaimCount";
+            this.lblClaimCount.Size = new System.Drawing.Size(2, 2);
+            this.lblClaimCount.TabIndex = 14;
+            // 
+            // cbInsurance
+            // 
+            this.cbInsurance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInsurance.FormattingEnabled = true;
+            this.cbInsurance.Location = new System.Drawing.Point(130, 61);
+            this.cbInsurance.Name = "cbInsurance";
+            this.cbInsurance.Size = new System.Drawing.Size(327, 28);
+            this.cbInsurance.TabIndex = 13;
+            // 
+            // dtpInsuranceEndDate
+            // 
+            this.dtpInsuranceEndDate.CustomFormat = "MM/dd/yyyy";
+            this.dtpInsuranceEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpInsuranceEndDate.Location = new System.Drawing.Point(900, 63);
+            this.dtpInsuranceEndDate.Name = "dtpInsuranceEndDate";
+            this.dtpInsuranceEndDate.Size = new System.Drawing.Size(246, 27);
+            this.dtpInsuranceEndDate.TabIndex = 9;
+            this.dtpInsuranceEndDate.TabStop = false;
+            this.dtpInsuranceEndDate.Text = "08/26/2019";
+            this.dtpInsuranceEndDate.Value = new System.DateTime(2019, 8, 26, 9, 0, 21, 759);
+            this.dtpInsuranceEndDate.ValueChanged += new System.EventHandler(this.RadDateTimePicker2_ValueChanged);
+            // 
+            // lblInsurance
+            // 
+            this.lblInsurance.Location = new System.Drawing.Point(130, 39);
+            this.lblInsurance.Name = "lblInsurance";
+            this.lblInsurance.Size = new System.Drawing.Size(54, 18);
+            this.lblInsurance.TabIndex = 12;
+            this.lblInsurance.Text = "Insurance";
+            // 
+            // radLabel2
+            // 
+            this.radLabel2.Location = new System.Drawing.Point(610, 39);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(56, 18);
+            this.radLabel2.TabIndex = 11;
+            this.radLabel2.Text = "Start Date";
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.Location = new System.Drawing.Point(900, 34);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(52, 18);
+            this.radLabel1.TabIndex = 10;
+            this.radLabel1.Text = "End Date";
+            // 
+            // dtpInsuranceStartDate
+            // 
+            this.dtpInsuranceStartDate.CustomFormat = "MM/dd/yyyy";
+            this.dtpInsuranceStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpInsuranceStartDate.Location = new System.Drawing.Point(610, 63);
+            this.dtpInsuranceStartDate.Name = "dtpInsuranceStartDate";
+            this.dtpInsuranceStartDate.Size = new System.Drawing.Size(246, 27);
+            this.dtpInsuranceStartDate.TabIndex = 8;
+            this.dtpInsuranceStartDate.TabStop = false;
+            this.dtpInsuranceStartDate.Text = "08/26/2019";
+            this.dtpInsuranceStartDate.Value = new System.DateTime(2019, 8, 26, 9, 0, 21, 759);
+            // 
+            // radButton1
+            // 
+            this.radButton1.Location = new System.Drawing.Point(1338, 50);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(278, 61);
+            this.radButton1.TabIndex = 6;
+            this.radButton1.Text = "Load Claims";
+            this.radButton1.Click += new System.EventHandler(this.RadButton1_Click_2);
             // 
             // radPageViewPage2
             // 
@@ -622,15 +744,6 @@
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(2156, 20);
             this.radMenu1.TabIndex = 5;
-            // 
-            // radButton1
-            // 
-            this.radButton1.Location = new System.Drawing.Point(267, 81);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(278, 61);
-            this.radButton1.TabIndex = 1;
-            this.radButton1.Text = "radButton1";
-            this.radButton1.Click += new System.EventHandler(this.RadButton1_Click_2);
             // 
             // MainForm
             // 
@@ -688,10 +801,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pvClaimExport)).EndInit();
             this.pvClaimExport.ResumeLayout(false);
             this.radPageViewPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
+            this.radPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridClaims.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClaims)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
+            this.radPanel1.ResumeLayout(false);
+            this.radPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblClaimCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpInsuranceEndDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblInsurance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpInsuranceStartDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -748,8 +872,17 @@
         private Telerik.WinControls.UI.RadPageViewPage pgClaimExport;
         private Telerik.WinControls.UI.RadPageView pvClaimExport;
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage1;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage2;
+        private Telerik.WinControls.UI.RadPanel radPanel2;
+        private Telerik.WinControls.UI.RadGridView gridClaims;
+        private Telerik.WinControls.UI.RadPanel radPanel1;
         private Telerik.WinControls.UI.RadButton radButton1;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpInsuranceEndDate;
+        private Telerik.WinControls.UI.RadLabel lblInsurance;
+        private Telerik.WinControls.UI.RadLabel radLabel2;
+        private Telerik.WinControls.UI.RadLabel radLabel1;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpInsuranceStartDate;
+        private System.Windows.Forms.ComboBox cbInsurance;
+        private Telerik.WinControls.UI.RadLabel lblClaimCount;
     }
 }
