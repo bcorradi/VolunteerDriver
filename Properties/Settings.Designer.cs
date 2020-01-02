@@ -33,5 +33,16 @@ namespace AEOA.VolunteerDriver.Properties {
                 return ((string)(this["Volunteer_Dev_BradConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=hermes\\vd;Initial Catalog=Volunteer_DriversSQL;Integrated Security=Tr" +
+            "ue")]
+        public string Volunteer_DriverSQLConnectionString {
+            get {
+                return ((string)(this["Volunteer_DriverSQLConnectionString"]));
+            }
+        }
     }
 }

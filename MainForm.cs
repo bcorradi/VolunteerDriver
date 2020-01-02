@@ -21,6 +21,7 @@ using AEOA.VolunteerDriver.Custom_Controls;
 using AEOA.Volunteer.Data;
 using Telerik.WinControls.Data;
 using EdiFabric.Examples.X12.T837P;
+using EdiFabric.Examples.X12.Common;
 
 namespace AEOA.VolunteerDriver
 {
@@ -524,11 +525,16 @@ namespace AEOA.VolunteerDriver
             lblClaimCount.Text = string.Format("Claim Count:  {0}", claimList.Count);
             gridClaims.DataSource = claimList;
 
+            GridViewCheckBoxColumn a = new GridViewCheckBoxColumn();
+            a.HeaderText = "Export";
+            gridClaims.MasterTemplate.Columns.Insert(0, a);
             gridClaims.MasterTemplate.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
             gridClaims.MasterTemplate.Columns["ClaimDetails"].IsVisible = false;
             gridClaims.MasterTemplate.Columns["TotalAmount"].FormatString = "{0:C}";
             gridClaims.MasterTemplate.Columns["AmountPaid"].FormatString = "{0:C}";
             gridClaims.MasterTemplate.Columns["InsuranceRate"].FormatString = "{0:C}";
+
+            
             gridClaims.MasterTemplate.Columns["ClaimDate"].FormatString = "{0:MM/dd/yyyy}";
 
 
@@ -555,14 +561,11 @@ namespace AEOA.VolunteerDriver
 //            Payee p = new Payee("ARROWHEAD TRANSIT", "702 S 3RD AVE", "", "VIRGINIA", "MN", "557922776", "ZZ", "AV09311993", "030240928", "030240928", "AV01101957", "RYAN ZINTER", "TE", "2187356813", "AVAILITY");
 
             _837Submitter Submitter_837 = new _837Submitter("41", "2", "AEOA", "46", "41-6052144", "IC", "RYAN ZINTER", "TE", "2187356813");
+            
 
-            _837StaticOutput _837 = new _837StaticOutput(_837StaticOutput.eProvider.BlueCross, _837StaticOutput.eMode.Test);
+            _837StaticOutput _837Input = new _837StaticOutput(_837StaticOutput.eProvider.BlueCross, _837StaticOutput.eMode.Test);
+            EDIFabric.Write(claimList, _837Input);
 
-
-            _837StaticOutput a = new _837StaticOutput(_837StaticOutput.eProvider.BlueCross, _837StaticOutput.eMode.Test);
-                        
-
-            //EVVExample.Write(claimList);
         }
 
         private void RadButton2_Click_1(object sender, EventArgs e)

@@ -34,11 +34,11 @@
   <ItemGroup>
     <Reference Include="EdiFabric.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30198c5f4974e51a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\EdiFramework-9.8.5\EF_985_Trial\net45\EdiFabric.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\EDIFabric-Purchased\DLLs\net45\EdiFabric.Core.dll</HintPath>
     </Reference>
     <Reference Include="EdiFabric.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30198c5f4974e51a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\EdiFramework-9.8.5\EF_985_Trial\net45\EdiFabric.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\EDIFabric-Purchased\DLLs\net45\EdiFabric.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,6 +55,7 @@
     <Compile Include="SegmentBuilders.cs" />
     <Compile Include="StreamExtensions.cs" />
     <Compile Include="XmlExtensions.cs" />
+    <Compile Include="_837StaticOutput.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
